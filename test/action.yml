@@ -1,0 +1,16 @@
+name: "Kyverno Tests Runner"
+description: "Run a suite of Kyverno policy tests in a folder"
+branding:
+  icon: "lock"
+  color: "purple"
+inputs:
+  folder:
+    required: true
+    default: .
+    description: "Path to the folder where tests should be run"
+runs:
+  using: "docker"
+  image: "docker://eu.gcr.io/mettle-bank/ghcr.io/kyverno/kyverno-cli:v1.7.2"
+  args:
+    - test
+    - ${{ inputs.folder }}

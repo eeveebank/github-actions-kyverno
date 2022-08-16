@@ -1,2 +1,3 @@
-# github-actions-kyverno
-Our own kyverno action
+# Github Actions Kyverno
+
+Our own kyverno action to run policy tests.
