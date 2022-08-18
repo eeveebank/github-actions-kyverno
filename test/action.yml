@@ -11,6 +11,7 @@ inputs:
 runs:
   using: "docker"
   image: "docker://eu.gcr.io/mettle-bank/ghcr.io/kyverno/kyverno-cli:v1.7.2"
+  entrypoint: /kyverno
   args:
     - test
     - ${{ inputs.folder }}
